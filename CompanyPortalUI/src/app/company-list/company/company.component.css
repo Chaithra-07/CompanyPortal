@@ -1,0 +1,12 @@
+.company{
+    background-color:whitesmoke;
+    margin: 24px 24px 24px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-left: 8px solid brown;
+}
+
+.color{
+    color:brown;
+}

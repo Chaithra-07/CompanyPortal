@@ -1,0 +1,22 @@
+.page-title{
+    padding: 24px;
+    padding-left: 16px;
+}
+.allign-right{
+    text-align: right;
+} 
+
+.btn-brand {
+    margin: 24px;
+    justify-items: right;
+    float: right;
+    border-color: green;
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+}
+
+    
+.title{
+    color:brown;
+}

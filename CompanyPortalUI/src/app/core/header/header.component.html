@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    
+      <li class="nav-item" *ngIf="!authService.isAuthenticated()">
+        <a class="nav-link" routerLink="/signin">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="!authService.isAuthenticated()">
+        <a class="nav-link" routerLink="/signup">Register</a>
+      </li>
+      <li class="nav-item" *ngIf="authService.isAuthenticated()">
+        <a class="nav-link" (click)="onLogout()">Logout</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" *ngIf="authService.isAuthenticated()">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name= "searchString" [(ngModel)]="searchString">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchCompany()">{{buttonText}}</button>
+    </form>
+  </div>
+</nav>

@@ -1,0 +1,9 @@
+<div class="company">
+<div class="company-name">
+<h4>{{company.company.name}}</h4>
+</div>
+<div>
+<span *ngIf="!company.isFavourite" (click)="addCompanyAsFavourite()"><i class="fa fa-heart color" title="Add to favourite list"></i></span>
+<span *ngIf="company.isFavourite" (click)="deleteCompanyAsFavourite()"><i class="fa fa-trash color" title="Remove from favourites"></i></span>
+</div>
+</div>

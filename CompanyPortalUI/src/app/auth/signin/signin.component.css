@@ -1,0 +1,11 @@
+.reset-password{
+    cursor:pointer;
+    font-size: 18px;
+    text-decoration: underline;
+}
+.submit_button{
+    margin-bottom: 16px;
+}
+.login-form{
+    padding-top: 32px;
+}

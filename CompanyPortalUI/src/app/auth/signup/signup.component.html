@@ -1,0 +1,40 @@
+<div class="row register-form">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <h3>Register</h3>
+      <form [formGroup]="registrationForm" (ngSubmit)="onSignup()">
+    <div class="form-group">
+      <label>First Name</label>
+      <input formControlName="firstName" id="firstName" type="text"  class="form-control">
+      <div *ngIf="validateForms.firstName.touched && validateForms.firstName.invalid" class="alert alert-danger">
+          <div *ngIf="validateForms.firstName.errors.required">Firstname is required.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input formControlName="lastName" id="lastName" type="text" class="form-control">
+      <div *ngIf="validateForms.lastName.touched && validateForms.lastName.invalid" class="alert alert-danger">
+          <div *ngIf="validateForms.lastName.errors.required">Lastname is required.</div>
+      </div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input formControlName="email" id="email" type="text"  class="form-control">
+        <div *ngIf="validateForms.email.touched && validateForms.email.invalid" class="alert alert-danger">
+            <div *ngIf="validateForms.email.errors.required">Email is required.</div>
+            <div *ngIf="validateForms.email.errors.email">Please, enter valid email address.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input formControlName="password" id="password" type="password" class="form-control">
+        <div *ngIf="validateForms.password.touched && validateForms.password.invalid" class="alert alert-danger">
+            <div *ngIf="validateForms.password.errors.required">Password is required.</div>
+        </div>
+      </div>
+    <hr>
+    <button class="btn btn-success submit_button" [disabled]="!registrationForm.valid">Register</button>
+  </form>
+    </div>
+  </div>
+  
+  

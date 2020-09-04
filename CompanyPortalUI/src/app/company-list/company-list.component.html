@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="page-title col-lg-6">
+      <h3 class="title">COMPANY LIST</h3> 
+    </div>
+    <div class=" col-lg-6 allign-right">
+      <button type="button" class="btn btn-brand btn-dribbble" (click)="viewFavourites()">
+        <i class="fa fa-heart"></i><span> {{buttonText}}</span>
+      </button>      
+    </div>
+</div>
+
+  <hr>
+  <div class="row">
+    <div class="col-xs-6 col-lg-6">
+      <h5><u>Sort Companies <span (click)="sortCompany()"><i class="fa fa-sort" title="Sort company"></i></span></u></h5>
+      <app-company *ngFor="let company of companies; let i=index"
+      [company]="company"></app-company>
+    </div>
+    <div class="col-xs-6 col-lg-6" *ngIf="favouriteCompanies.length > 0">
+      <h5><u>Your Favourites</u></h5>
+      <app-company *ngFor="let company of favouriteCompanies; let i=index"
+      [company]="company"
+     ></app-company>
+    </div>
+  </div>
+  
+  
