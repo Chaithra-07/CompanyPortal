@@ -30,6 +30,10 @@ namespace CompanyPortal.Manager
             _token = token.Value;
         }
 
+        /// <summary>
+        /// Registers user
+        /// </summary>
+        /// <returns> user</returns>
         public async Task<User> RegisterAsync(User user)
         {
             try
@@ -49,6 +53,10 @@ namespace CompanyPortal.Manager
             }
         }
 
+        /// <summary>
+        /// Validates user
+        /// </summary>
+        /// <returns> user</returns>
         public User LoginAsync(string userId, string password)
         {
             try
@@ -68,6 +76,10 @@ namespace CompanyPortal.Manager
             }
         }
 
+        /// <summary>
+        /// Gets user
+        /// </summary>
+        /// <returns> user</returns>
         public User GetUserByEmail(string email)
         {
             try
@@ -87,6 +99,10 @@ namespace CompanyPortal.Manager
             }
         }
 
+        /// <summary>
+        /// Resets the password
+        /// </summary>
+        /// <returns> true or false </returns>
         public async Task<bool> ResetPassword(ResetPasswordViewModel resetPassword)
         {
             User user = GetUserByEmail(resetPassword.Email);
@@ -108,6 +124,10 @@ namespace CompanyPortal.Manager
             return false;
         }
 
+        /// <summary>
+        /// Verifies user
+        /// </summary>
+        /// <returns> user</returns>
         public async Task<bool> VerifyUser(User user)
         {
             try
@@ -123,6 +143,10 @@ namespace CompanyPortal.Manager
             }
         }
 
+        /// <summary>
+        /// generates Jwt token
+        /// </summary>
+        /// <returns>token</returns>
         public string GenerateJwtToken(User user)
         {
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -141,7 +165,10 @@ namespace CompanyPortal.Manager
             return tokenHandler.WriteToken(securityToken);
         }
 
-
+        /// <summary>
+        /// Check if user exist
+        /// </summary>
+        /// <returns> user</returns>
         private bool UserExists(string email)
         {
             return _context.Users.Any(e => e.Email == email);

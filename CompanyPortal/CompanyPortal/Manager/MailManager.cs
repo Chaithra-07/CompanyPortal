@@ -9,17 +9,14 @@ namespace CompanyPortal.Manager
 {
     public class MailManager : MailMessage
     {
-       // public ConsumerSettingDetail CompanyConsumerSettings { get; set; }
 
         #region Public Methods
         /// <summary>
-        /// [Intime-CS-09/01/2020] Send formatted email
+        /// Send formatted email
         /// </summary>
         /// <param name="smtpHost">Smtp server name</param>
-        /// <param name="requesterName">Requester Name</param>
-        /// <param name="consumerName">Consumer Name</param>
-        /// <param name="ssn">SSN number</param>
-        /// <param name="fnmaId">FNMAId</param>
+        /// <param name="name">Requester Name</param>
+        /// <param name="url">Consumer Name</param>
         public void SendEmail(string smtpHost, string name, string url)
         {
             string bodyContent = string.Empty;
@@ -44,10 +41,8 @@ namespace CompanyPortal.Manager
         /// Apply template
         /// </summary>
         /// <param name="smtpHost">Smtp server name</param>
-        /// <param name="requesterName">Requester Name</param>
-        /// <param name="consumerName">Consumer Name</param>
-        /// <param name="ssn">SSN number</param>
-        /// <param name="fnmaId">FNMAId</param>
+        /// <param name="name">Requester Name</param>
+        /// <param name="url">Consumer Name</param>
         /// <returns> Formatted string</returns>
         private string FormatMail(string smtpHost, string name, string url)
         {

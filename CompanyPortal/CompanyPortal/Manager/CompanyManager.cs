@@ -18,11 +18,21 @@ namespace CompanyPortal.Manager
         {
             _context = context;
         }
+
+        /// <summary>
+        /// Get companies
+        /// </summary>
+        /// <returns> list of companies</returns>
         public async Task<ActionResult<IEnumerable<Company>>> GetCompanies()
         {
             return await _context.Companies.ToListAsync();
         }
 
+        /// <summary>
+        /// Adds company
+        /// <param name="company">Smtp server name</param>
+        /// </summary>
+        /// <returns> returns company</returns>
         public async Task<Company> AddCompanyAsync(Company company)
         {
             try
@@ -37,6 +47,10 @@ namespace CompanyPortal.Manager
             }
         }
 
+        /// <summary>
+        /// Get companies
+        /// </summary>
+        /// <returns> list of companies</returns>
         public List<CompanyViewModel> GetCompanies(long userId, string sortOrder, string searchString)
         {
             try
@@ -44,7 +58,7 @@ namespace CompanyPortal.Manager
                 List<CompanyViewModel> companies = _context.Companies.Select(c => new CompanyViewModel
                 {
                     Company = c,
-                    IsFavourite = _context.Favourites.Any(f => f.User.UserId == userId && f.Company.CompanyId == c.CompanyId)
+                    IsFavourite = _context.Favourites.Any(f => f.UserId == userId && f.CompanyId == c.CompanyId)
                 }).ToList();
 
 
@@ -75,13 +89,17 @@ namespace CompanyPortal.Manager
             }
         }
 
+        // <summary>
+        /// Adds company into the favourite
+        /// </summary>
+        /// <returns> true or false</returns>
         public async Task<bool> AddFavourite(FavouriteViewModel favourite)
         {
             try
             {
                 Favourites favouriteCompany = new Favourites();
-                favouriteCompany.Company.CompanyId = favourite.CompanyId;
-                favouriteCompany.User.UserId = favourite.UserId;
+                favouriteCompany.CompanyId = favourite.CompanyId;
+                favouriteCompany.UserId = favourite.UserId;
                 _context.Favourites.Add(favouriteCompany);
                 await _context.SaveChangesAsync();
                 return true;
@@ -92,11 +110,15 @@ namespace CompanyPortal.Manager
             }
         }
 
+        /// <summary>
+        /// Delets company from the favourite
+        /// </summary>
+        /// <returns> true or false</returns>
         public async Task<bool> DeleteFavourite(long userId, long companyId)
         {
             try
             {
-                var result  = _context.Favourites.Where(f => f.Company.CompanyId == companyId && f.User.UserId == userId).FirstOrDefault();
+                var result = _context.Favourites.Where(f => f.CompanyId == companyId && f.UserId == userId).FirstOrDefault();
                 _context.Entry(result).State = EntityState.Deleted;
                 await _context.SaveChangesAsync();
                 return true;

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A4Mgm5YM94r1Hp+Zqhlu/Slnb5HTWlZ0DNuGrskU+BSDRr+WyOL+aLA8ey63NAgU3/cuG9BFu+jHVoTkxsYKLA==",
+  "dgSpecHash": "UAPGPSNg2Hrekgx0mTu23rlxs0AmeOjEUptLWt2x6K7EnGG2R6jQgZ1yrNDKyt95MeNKW3I2Sch0Hi3OA1iw6w==",
   "success": true,
-  "projectFilePath": "F:\\Assignment\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj",
+  "projectFilePath": "F:\\Angularprojects\\Github-repo\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chaithra.s\\.nuget\\packages\\mailkit\\2.8.0\\mailkit.2.8.0.nupkg.sha512",
     "C:\\Users\\chaithra.s\\.nuget\\packages\\microsoft.aspnetcore.authorization\\1.0.2\\microsoft.aspnetcore.authorization.1.0.2.nupkg.sha512",

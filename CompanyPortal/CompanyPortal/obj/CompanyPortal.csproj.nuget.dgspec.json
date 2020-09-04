@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Assignment\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj": {}
+    "F:\\Angularprojects\\Github-repo\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj": {}
   },
   "projects": {
-    "F:\\Assignment\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj": {
+    "F:\\Angularprojects\\Github-repo\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Assignment\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj",
+        "projectUniqueName": "F:\\Angularprojects\\Github-repo\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj",
         "projectName": "CompanyPortal",
-        "projectPath": "F:\\Assignment\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj",
+        "projectPath": "F:\\Angularprojects\\Github-repo\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj",
         "packagesPath": "C:\\Users\\chaithra.s\\.nuget\\packages\\",
-        "outputPath": "F:\\Assignment\\CompanyPortal\\CompanyPortal\\obj\\",
+        "outputPath": "F:\\Angularprojects\\Github-repo\\CompanyPortal\\CompanyPortal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

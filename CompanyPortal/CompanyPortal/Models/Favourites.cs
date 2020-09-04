@@ -8,7 +8,8 @@ namespace CompanyPortal.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
-        public User User { get; set; }
-        public Company Company { get; set; }
+        public long CompanyId { get; set; }
+        public long UserId { get; set; }
+      
     }
 }
