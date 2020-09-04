@@ -38,7 +38,7 @@ export class SignupComponent  {
       result = data;
       
       if(result != null){
-      alert("Registered successfully");
+      alert("Registered successfully. Please check your mail for verification link");
       this.router.navigate(['/signin']);
       }
     });

@@ -47,6 +47,7 @@ export class CompanyListService {
   }
 
   private handleError(error: any) {
+    alert(error.error.message);
     return throwError(error);
   }
 }

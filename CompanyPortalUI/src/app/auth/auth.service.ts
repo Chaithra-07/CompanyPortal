@@ -74,6 +74,7 @@ export class AuthService {
   }
 
   private handleError(error: any) {
+    alert(error.error.message);
     return throwError(error);
   }
 }
